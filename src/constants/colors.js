@@ -24,6 +24,7 @@ export const Colors = {
   textSecondary: '#374151',
   textMuted: '#6b7280',
   textLight: '#9ca3af',
+  textTertiary: '#d1d5db',
   textOnPrimary: '#FFFFFF',
 
   // Gradients (start, end)

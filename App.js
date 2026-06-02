@@ -1,6 +1,5 @@
 import React from 'react';
-import { NavigationContainer } from '@react-native-async-storage/async-storage'; // just placeholder if not used here
-import { NavigationContainer as NavContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
@@ -12,10 +11,10 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <AuthProvider>
-          <NavContainer>
+          <NavigationContainer>
             <StatusBar style="auto" />
             <AppNavigator />
-          </NavContainer>
+          </NavigationContainer>
         </AuthProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>

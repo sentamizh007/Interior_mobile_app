@@ -1,25 +1,45 @@
 {
   "expo": {
-    "name": "interior_app",
+    "name": "InteriorAI",
     "slug": "interior_app",
     "version": "1.0.0",
+    "sdkVersion": "56.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#9333ea"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "InteriorAI needs access to your photos to let you upload room photos for AI redesign.",
+        "NSCameraUsageDescription": "InteriorAI needs camera access to capture room photos."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#9333ea",
+        "foregroundImage": "./assets/android-icon-foreground.png"
       },
-      "package": "com.anonymous.interior_app"
+      "package": "com.sentamizh007.interiorai",
+      "permissions": [
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "InteriorAI needs access to your photos to upload room images for AI redesign."
+        }
+      ]
+    ]
   }
 }
