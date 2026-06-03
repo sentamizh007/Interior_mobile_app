@@ -22,7 +22,7 @@ export default function RegisterScreen({ navigation }) {
     try {
       await register(name, email, password);
     } catch (error) {
-      Alert.alert('Registration Failed', error);
+      Alert.alert('Registration Failed', typeof error === 'string' ? error : (error?.message || 'An error occurred'));
     } finally {
       setLoading(false);
     }

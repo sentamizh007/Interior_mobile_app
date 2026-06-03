@@ -22,7 +22,7 @@ export default function LoginScreen({ navigation }) {
       await login(email, password);
       // AuthContext will automatically redirect us because userToken updates
     } catch (error) {
-      Alert.alert('Login Failed', error);
+      Alert.alert('Login Failed', typeof error === 'string' ? error : (error?.message || 'An error occurred'));
     } finally {
       setLoading(false);
     }

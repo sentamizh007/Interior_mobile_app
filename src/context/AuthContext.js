@@ -71,6 +71,8 @@ export const AuthProvider = ({ children }) => {
       setIsLoading(false);
     } catch (e) {
       console.log(`isLoggedIn in error ${e}`);
+    } finally {
+      setIsLoading(false);
     }
   };
 
